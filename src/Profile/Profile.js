@@ -23,11 +23,14 @@ const ProfilePage = () => {
           setUserId(decoded.id);
 
           // Fetch all events
-          const response = await axios.get("http://localhost:3000/api/events", {
-            headers: {
-              Authorization: `Bearer ${token}`, // Send token in headers
-            },
-          });
+          const response = await axios.get(
+            "http://18.133.196.225:3000/api/events",
+            {
+              headers: {
+                Authorization: `Bearer ${token}`, // Send token in headers
+              },
+            }
+          );
           console.log(response.data);
           const allEvents = response.data;
 

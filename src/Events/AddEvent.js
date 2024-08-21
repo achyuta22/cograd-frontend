@@ -47,7 +47,7 @@ const AddEvent = () => {
       }
     } catch (error) {
       setLoading(false);
-    alert("Error uploading image");
+      alert("Error uploading image");
       console.error("Image upload error:", error);
       return null;
     }
@@ -59,7 +59,7 @@ const AddEvent = () => {
     let imageUrl = null;
     if (image) {
       imageUrl = await uploadImageToCloudinary(image);
-      console.log(imageUrl)
+      console.log(imageUrl);
       if (!imageUrl) return; // Stop if image upload failed
     }
 
@@ -73,7 +73,7 @@ const AddEvent = () => {
     };
 
     try {
-      await axios.post("http://localhost:3000/api/events", eventData, {
+      await axios.post("http://18.133.196.225:3000/api/events", eventData, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },

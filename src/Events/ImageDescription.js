@@ -28,7 +28,7 @@ const ImageAndDescription = () => {
     const fetchEvent = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/events/${id}`,
+          `http://18.133.196.225:3000/api/events/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ const ImageAndDescription = () => {
       }
 
       await axios.post(
-        `http://localhost:3000/api/events/${id}/register`,
+        `http://18.133.196.225:3000/api/events/${id}/register`,
         {},
         {
           headers: {
@@ -80,7 +80,7 @@ const ImageAndDescription = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/api/events/${id}`, {
+      await axios.delete(`http://18.133.196.225:3000/api/events/${id}`, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },

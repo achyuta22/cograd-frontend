@@ -26,14 +26,14 @@ const UpdateEventPage = () => {
       try {
         const token = getToken();
         const response = await axios.get(
-          `http://localhost:3000/api/events/${id}`,
+          `http://18.133.196.225:3000/api/events/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           }
         );
-        console.log(response.data)
+        console.log(response.data);
         setEvent(response.data);
       } catch (error) {
         setError("Failed to load event.");
@@ -55,7 +55,7 @@ const UpdateEventPage = () => {
     e.preventDefault();
     try {
       const token = getToken();
-      await axios.put(`http://localhost:3000/api/events/${id}`, event, {
+      await axios.put(`http://18.133.196.225:3000/api/events/${id}`, event, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

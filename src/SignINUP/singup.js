@@ -20,7 +20,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/users/register",
+        "http://18.133.196.225:3000/api/users/register",
         {
           email,
           password,

@@ -17,11 +17,14 @@ const ShowEvent = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/events", {
-          headers: {
-            Authorization: `Bearer ${getToken()}`,
-          },
-        });
+        const response = await axios.get(
+          "http://18.133.196.225:3000/api/events",
+          {
+            headers: {
+              Authorization: `Bearer ${getToken()}`,
+            },
+          }
+        );
         setEvents(response.data);
         setFilteredEvents(response.data); // Initialize with all events
       } catch (error) {
